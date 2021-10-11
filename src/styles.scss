@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+/*GLOBAL MARGINS AND PADDING*/
+.mr-1 {
+    margin-right: 0.5em;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+
+$primary-typography: 'DM Sans';
+$secondary-typography: 'Poppins';
+$accent: #0d6efd;
+
+h1, h2, h3 {
+    font-family: $primary-typography;
+    font-weight: 700 !important;
+}
+h4, h5 {
+    font-family: $secondary-typography;
+    font-weight: 400 !important;
+}
+h1 {
+    font-size: 3em !important;
+}
+h2 {
+    font-size: 2.5em !important;
+}
+h4 {
+    font-size: 1.2em !important;
+}
+.btn--black {
+    background-color: #1c1d1f !important;
+    color: #fff !important;
+    &:hover {
+        background-color: #f7f9fa !important;
+        color: #1c1d1f !important;
+    }
+}
+.btn-lg {
+    padding: 0.5em 2em !important;
+    border-radius: 2px !important;
+}
+.f-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul {
+    padding: 0 !important;
+    li {
+        list-style: none;
+    }
+}
+#vipSection {
+    background-color: $accent;
+}
+.flexflow-column {
+    display: flex;
+    flex-flow: column;
+    .flex-1 {
+        flex: 1;
+    }
+}
+.flexflow-row {
+    display: flex;
+    flex-flow: row;
+    .flex-1 {
+        flex: 1;
+    }
+}
+@media screen and (max-width: 991px) {
+    section.p-5 {
+        padding: 3em 1em!important;
+    }
+    h1 {
+        font-size: 2em !important;
+    }
+    h2 {
+        font-size: 1.8em !important;
+    }
+    #testimonials .p-5 {
+        padding: 0 !important;
+    }
+}

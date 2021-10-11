@@ -1,0 +1,14 @@
+a {
+    color: #fff;
+    font-weight: 600 !important;
+    font-size: 1.2em;
+    .navbar-brand {
+        font-family: 'DM sans';
+        }
+        &.navbar-brand {
+            font-size: 1.5em !important;
+        }
+}
+.nav-item {
+    padding: 0em 1em;
+}
