@@ -1,3 +1,5 @@
+@import url('../../assets/scss/courses.scss');
+
 section:first-of-type {
     background-image: url('../../assets/img/7567434.jpeg');
     background-position: center;
@@ -25,7 +27,7 @@ section:first-of-type {
                 font-weight: 600 !important;
             }
         }
-    }
+    } /*
     .courses--scroll--wrap {
             .scroll--wrap {
             ul {
@@ -80,7 +82,7 @@ section:first-of-type {
                 }
             }
         }
-    }
+    } */
 }
 #statistics {
     background-color: #f7f9fa;

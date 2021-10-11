@@ -1,0 +1,21 @@
+#profileHeader {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 3em 1em 0em 1em;
+}
+@media screen and (max-width:576px) {
+    #profileHeader {
+        padding: 3em 0em 0em 0em;
+    }
+}
+#cursosTotales li {
+    cursor: pointer;
+    border-bottom: 0.5em solid #0d6efd;
+    padding: 0.5em 1em;
+    &.active {
+        border-bottom: 0.5em solid #72a5f1;
+    }
+    &:hover {
+        border-bottom: 0.5em solid lighten(#72a5f1, 10%);
+    }
+} 
