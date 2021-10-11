@@ -1,0 +1,7 @@
+input {
+    font-family: 'Poppins' !important;
+}
+//, input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input::-ms-input-placeholder
+input::placeholder {
+    font-family: 'Poppins' !important;
+}

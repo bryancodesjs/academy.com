@@ -3,7 +3,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Academy.com</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon f-center"><i class="bi bi-list"></i></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -17,9 +17,9 @@
                 <a class="nav-link" routerLink="/">Eventos</a>
               </li>
             </ul>
-            <div class="d-flex">
-                <a href="" class="nav-link">Registro</a> 
-                <button class="btn btn--black">Iniciar Sesion</button>
+            <div class="d-flex column--on--mobile">
+                <a routerLink="/register" class="nav-link">Registro</a> 
+                <a  routerLink="/login" id="loginNavButton" class="btn btn--black">Iniciar Sesion</a>
             </div>
           </div>
         </div>

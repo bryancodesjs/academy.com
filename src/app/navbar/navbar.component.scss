@@ -4,11 +4,31 @@ a {
     font-size: 1.2em;
     .navbar-brand {
         font-family: 'DM sans';
+    }
+    &.navbar-brand {
+        font-size: 1.5em !important;
+    }
+    &#loginNavButton {
+        color:#fff !important;
+        &:hover {
+            color: #000 !important;
         }
-        &.navbar-brand {
-            font-size: 1.5em !important;
-        }
+    }
 }
 .nav-item {
     padding: 0em 1em;
+}
+@media screen and (max-width:991px) {
+    .column--on--mobile {
+        flex-direction: column;
+        width: fit-content;
+        margin-bottom: 3em;
+        margin-top: 1em;
+    }
+}
+.navbar-toggler-icon {
+    font-size: 1.5em;
+}
+button:focus {
+    box-shadow: none !important;
 }

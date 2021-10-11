@@ -1,0 +1,33 @@
+<app-navbar class="light--navbar"></app-navbar>
+<div class="container-fluid p-5 flex-1">
+    <div class="content">
+        <div class="f-center flex-column">
+            <form class="responsive--form">
+                <div class="mb-3">
+                    <h3><b>Crea una cuenta</b></h3>
+                </div>
+                <div class="mb-3">
+                    <hr>
+                </div>
+                <div class="mb-3 form-field">
+                    <label for="nameInput" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nameInput">
+                  </div>
+                <div class="mb-3 form-field">
+                  <label for="mailInput" class="form-label">Correo Electronico</label>
+                  <input type="email" class="form-control" id="mailInput">
+                </div>
+                <div class="mb-3 form-field">
+                  <label for="passwordInput" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="passwordInput">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-primary btn-lg w-100">Iniciar Sesiòn</button>
+                </div>
+            </form>
+            <aside>
+                <h4>Tienes una cuenta? <a routerLink="/login" class="link">Inicia Sesion</a></h4>
+            </aside>
+        </div>
+    </div>
+</div>

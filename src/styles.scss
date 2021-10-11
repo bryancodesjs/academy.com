@@ -9,8 +9,16 @@
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
-
+app-root {
+    display: flex;
+    flex-flow: column;
+    height:100%
+}
+app-login {
+    flex:1;
+}
 $primary-typography: 'DM Sans';
 $secondary-typography: 'Poppins';
 $accent: #0d6efd;
@@ -32,6 +40,24 @@ h2 {
 h4 {
     font-size: 1.2em !important;
 }
+a {
+    font-family: 'DM Sans' !important;
+    &.link {
+        font-size: 1.2em !important;
+        text-decoration: none !important;
+    }
+}
+input, .form-field label, input:-ms-input-placeholder {
+    font-family: $secondary-typography !important;
+}
+button.navbar-toggler {
+    color: red;
+}
+app-navbar.home--nav {
+    .navbar {
+        background-color: red;
+    }
+}
 .btn--black {
     background-color: #1c1d1f !important;
     color: #fff !important;
@@ -45,7 +71,7 @@ h4 {
     border-radius: 2px !important;
 }
 .f-center {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
 }
@@ -72,6 +98,9 @@ ul {
         flex: 1;
     }
 }
+.flex-1 {
+    flex: 1;
+}
 @media screen and (max-width: 991px) {
     section.p-5 {
         padding: 3em 1em!important;
@@ -84,5 +113,30 @@ ul {
     }
     #testimonials .p-5 {
         padding: 0 !important;
+    }
+}
+input.form-control {
+    padding: 0.7em 1.4em !important;
+    border: 1px solid #484848;
+    border-radius: 2px;
+}
+app-navbar.light--navbar nav {
+    border-bottom: 1px solid lightgray;
+    a {
+        color: #000 !important;
+        &:hover {
+            color: #0d6efd !important;
+        }
+    }
+}
+form.responsive--form {
+    width: 420px;
+}
+@media screen and (max-width:576px) {
+    form.responsive--form {
+        width: 100%;
+    }
+    .container-fluid.p-5 {
+        padding: 3em 1em !important;
     }
 }
