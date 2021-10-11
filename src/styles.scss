@@ -16,7 +16,7 @@ app-root {
     flex-flow: column;
     height:100%
 }
-app-login {
+app-login, app-register {
     flex:1;
 }
 $primary-typography: 'DM Sans';
@@ -51,13 +51,9 @@ input, .form-field label, input:-ms-input-placeholder {
     font-family: $secondary-typography !important;
 }
 button.navbar-toggler {
-    color: red;
+    color: #000;
 }
-app-navbar.home--nav {
-    .navbar {
-        background-color: red;
-    }
-}
+
 .btn--black {
     background-color: #1c1d1f !important;
     color: #fff !important;
@@ -138,5 +134,19 @@ form.responsive--form {
     }
     .container-fluid.p-5 {
         padding: 3em 1em !important;
+    }
+}
+app-navbar.home--nav--wrap #navigationBar {
+    &.home--nav {
+        background-color: #fff;
+        a {
+            color: #000;
+        }
+        button i {
+            color: #000;
+        }
+    }
+    button i {
+        color: #fff;
     }
 }
