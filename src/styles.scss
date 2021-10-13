@@ -18,6 +18,8 @@ app-root {
 }
 app-register, app-profile, app-login {
     flex:1;
+    display: flex;
+    flex-flow: column;
 }
 app-login {
     display: flex;

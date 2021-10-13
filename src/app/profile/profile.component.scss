@@ -19,3 +19,13 @@
         border-bottom: 0.5em solid lighten(#72a5f1, 10%);
     }
 } 
+ul {
+    margin-bottom: 0;
+}
+li.course {
+    width: 260px !important;
+    max-width: 260px !important;
+    .course--img {
+        width: 260px !important;
+    }
+}
