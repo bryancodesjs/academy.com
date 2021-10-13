@@ -5,3 +5,11 @@ input {
 input::placeholder {
     font-family: 'Poppins' !important;
 }
+.container-fluid {
+    //height: 100%;
+}
+@media screen and (max-width:991px) {
+    .container-fluid {
+        height: inherit !important;
+    }
+}

@@ -14,10 +14,14 @@ body {
 app-root {
     display: flex;
     flex-flow: column;
-    height:100%
+    height:100vh;
 }
-app-login, app-register, app-profile {
+app-register, app-profile, app-login {
     flex:1;
+}
+app-login {
+    display: flex;
+    flex-flow: column;
 }
 $primary-typography: 'DM Sans';
 $secondary-typography: 'Poppins';
