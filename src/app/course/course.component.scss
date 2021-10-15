@@ -10,16 +10,99 @@
             height: 100%;
             #main {
                 .clip {
+                    height: 500px;
+                    display: flex;
+                    justify-content: center;
+                    //
                     width: 100%;
                     overflow: hidden;
+                    background-color: #1c1d1f;
                     video {
-                        width: 100%;
+                        height: 100%;
+                        //width: 100%;
+                    }
+                }
+                .material {
+                    padding: 1em;
+                    .tabs ul {
+                        padding: 0;
+                        display: flex;
+                        list-style: none;
+                        li {
+                            margin-right: 1.5em;
+                            cursor: pointer;
+                            h5 {
+                                font-weight: 600 !important;
+                            }
+                        }
                     }
                 }
             }
         }
     }
 }
+#instructor_identity {
+    .img--wrap {
+        width: 60px;
+        height: 60px;
+        overflow: hidden;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 140%;
+        }
+    }
+    .identity--text {
+        padding-left: 1em;
+        margin-left: 1em;
+        border-left: 1px solid lightgray;
+    }
+}
+#cerrarContenidoLateral {
+    cursor: pointer;
+}
+details.chapter {
+    border-bottom: 1px solid lightgray;
+}
+details summary::marker {
+    display: none !important;
+    content: "";
+}
+details summary {
+    background-color: #f5f5f5;
+    #subchapter_duration {
+        margin-left: 0.5em;
+        padding-left: 0.5em;
+        border-left: 1px solid lightgray;
+    }
+}
+.subchapters li {
+    padding: 1em;
+    cursor: pointer;
+    label, small {
+        pointer-events: none;
+    }
+    &:hover {
+        background-color: #d5d5d5;
+        transition: 0.1s ease;
+    }
+}
 .p-none {
     padding: 0 !important;
+}
+@media screen and (max-width: 991px) {
+    #sideMenu {
+        display: none !important;
+    }
+    #main {
+        .clip {
+            height: auto !important;
+            video {
+                width: 100% !important;
+                height: auto !important;
+            }
+        }
+    }
 }
