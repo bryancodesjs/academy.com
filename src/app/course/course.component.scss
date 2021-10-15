@@ -1,0 +1,25 @@
+#classroom.container-fluid {
+    padding: 0 !important;
+}
+#classroom {
+    display: flex;
+    flex-flow: column;
+    .content {
+        flex: 1;
+        #courseRender {
+            height: 100%;
+            #main {
+                .clip {
+                    width: 100%;
+                    overflow: hidden;
+                    video {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.p-none {
+    padding: 0 !important;
+}

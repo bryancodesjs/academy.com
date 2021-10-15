@@ -16,7 +16,7 @@ app-root {
     flex-flow: column;
     height:100vh;
 }
-app-register, app-profile, app-login {
+app-register, app-profile, app-login, app-course {
     flex:1;
     display: flex;
     flex-flow: column;
@@ -82,6 +82,13 @@ ul {
     li {
         list-style: none;
     }
+}
+#classroom {
+    flex:1 !important;
+}
+#classroomNavbar {
+    background-color: #1c1d1f;
+    color: white;
 }
 #vipSection {
     background-color: $accent;
