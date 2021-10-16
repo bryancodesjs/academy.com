@@ -28,12 +28,12 @@ export class CourseComponent implements OnInit {
     let toggleClip = (document.getElementById('toggleOnClip') as HTMLElement);
     if (controls.className == "fixed--to--screen col-lg-3 d-flex flex-column") {
       controls.className = "d-none";
-      main.className = "d-flex flex-column";
+      main.className = "col-lg-12";
       toggleClip.className = "toggle--on--clip show"
     } else {
       if (controls.className == "col-lg-3 d-flex flex-column") {
         controls.className = "d-none";
-        main.className = "d-flex flex-column";
+        main.className = "col-lg-12";
         toggleClip.className = "toggle--on--clip show";
       } else {
         controls.className = "col-lg-3 d-flex flex-column";
