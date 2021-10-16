@@ -18,14 +18,13 @@
                     <!-- course navigation tabs -->
                     <div class="tabs">
                         <ul class="d-flex">
-                            <li class="active"><h4>Descripcion del curso</h4></li>
-                            <li><h4>Contenidos del curso</h4></li>
-                            <li><h4>Notas</h4></li>
-                            <li><h4>Contenido del curso</h4></li>
+                            <li (click)="seleccionarTab('descripcion')" [ngClass]="descripcion? 'active' : '' "><h4>Descripcion del curso</h4></li>
+                            <li (click)="seleccionarTab('contenido')" [ngClass]="contenido? 'active show--on--mobile' : 'show--on--mobile' "><h4>Contenidos del curso</h4></li>
+                            <li (click)="seleccionarTab('notas')" [ngClass]="notas? 'active' : '' " ><h4>Notas</h4></li>
                         </ul>
                     </div>
                     <!-- *ngIf conditional module based on the chosen tab-->
-                    <section id="course_about">
+                    <section id="course_about" *ngIf="descripcion">
                         <hr>
                         <div class="d-flex flex-column mt-4 p-3">
                             <h3>Acerca de este curso</h3>
@@ -57,6 +56,129 @@
                                 </div>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae totam eum nesciunt asperiores vitae praesentium veritatis, quo odit quasi atque fugiat ut ipsam, doloribus id ipsa vero explicabo nostrum minima?</p>
                             </div>
+                        </div>
+                    </section>
+
+                    <section id="course_chapters_under_main" *ngIf="contenido" class="show--on--mobile">
+                        <div class="chapters">
+                            <!-- cada capitulo se renderiza dentro de un <details> y contiene una 
+                            serie de subcapitulos que se muestran dentro de <li> -->
+                            <details class="chapter">
+                                <summary class="p-3 d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5><b>Seccion 1: Introduccion a ABC</b></h5>
+                                        <h4 class="no-margin"><i class="bi bi-chevron-down"></i></h4>
+                                    </div>
+                                    <small id="progress">2/3 <span id="subchapter_duration">19 min</span></small>  
+                                </summary>
+                                <ul class="subchapters">
+                                    <li> <!-- *ngFor -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              1. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
+        
+                            <details class="chapter">
+                                <summary class="p-3 d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5><b>Seccion 1: Introduccion a ABC</b></h5>
+                                        <h4 class="no-margin"><i class="bi bi-chevron-down"></i></h4>
+                                    </div>
+                                    <small id="progress">2/3 <span id="subchapter_duration">19 min</span></small>  
+                                </summary>
+                                <ul class="subchapters">
+                                    <li> <!-- *ngFor -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              1. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
+        
+                            <details class="chapter">
+                                <summary class="p-3 d-flex flex-column">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h5><b>Seccion 1: Introduccion a ABC</b></h5>
+                                        <h4 class="no-margin"><i class="bi bi-chevron-down"></i></h4>
+                                    </div>
+                                    <small id="progress">2/3 <span id="subchapter_duration">19 min</span></small>  
+                                </summary>
+                                <ul class="subchapters">
+                                    <li> <!-- *ngFor -->
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              1. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                              2. Lorem ipsum dolor sit amet consectetur adipisicing.
+                                            </label>
+                                            <small class="text-muted">3 min</small>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </details>
                         </div>
                     </section>
                 </div>

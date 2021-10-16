@@ -9,6 +9,8 @@
         #courseRender {
             height: 100%;
             #main {
+                display: flex;
+                flex-flow: column;
                 .clip {
                     height: 500px;
                     display: flex;
@@ -23,6 +25,7 @@
                     }
                 }
                 .material {
+                    flex: 1;
                     padding: 1em;
                     .tabs ul {
                         padding: 0;
@@ -92,6 +95,9 @@ details summary {
 .p-none {
     padding: 0 !important;
 }
+.show--on--mobile {
+    display: none;
+}
 @media screen and (max-width: 991px) {
     #sideMenu {
         display: none !important;
@@ -105,6 +111,15 @@ details summary {
             }
         }
     }
+    #toggleOnClip {
+        display: none !important;
+        &.show {
+            display: none !important;
+        }
+    }
+    .show--on--mobile {
+        display: block !important;
+    }
 }
 .fixed--to--screen {
     position: fixed;
@@ -115,9 +130,13 @@ details summary {
 .chapters {
     overflow-y: scroll;
 }
-.tabs li.active {
-    h4 {
-        font-weight: 600 !important;
+.tabs li {
+    color: gray;
+    &.active {
+        h4 {
+            font-weight: 600 !important;
+            color: #000;
+        }
     }
 }
 #toggleOnClip {

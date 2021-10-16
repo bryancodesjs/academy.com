@@ -6,6 +6,39 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./course.component.scss']
 })
 export class CourseComponent implements OnInit {
+
+  descripcion: boolean = true;
+  contenido: boolean = false;
+  notas: boolean = false;
+  
+  seleccionarTab( opcion: string) {
+    switch (opcion) {
+      case 'descripcion':
+        this.descripcion = true;
+        this.contenido = false;
+        this.notas = false;
+        break;
+
+      case 'contenido':
+        this.descripcion = false;
+        this.contenido = true;
+        this.notas = false;
+        break;
+      
+      case 'notas':
+        this.descripcion = false;
+        this.contenido = false;
+        this.notas = true;
+        break;
+
+      default:
+        this.descripcion = false;
+        this.contenido = false;
+        this.notas = false;
+        break;
+    }
+  }
+
   @HostListener("window:scroll", ['$event'])
   scrollRead(){
     let offset = scrollY;
