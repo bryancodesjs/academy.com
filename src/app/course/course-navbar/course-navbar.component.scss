@@ -9,4 +9,18 @@
     .vertical-divisor {
         padding: 0em 1em;
     }
+    .back--btn {
+        display: none;
+    }
+}
+@media screen and (max-width:576px) {
+    #classroomNavbar {
+        padding: 1em !important;
+    }
+    .brand, .nav--btn {
+        display: none !important;
+    }    
+    .back--btn {
+        display: block !important;
+    }
 }

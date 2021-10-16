@@ -106,3 +106,27 @@ details summary {
         }
     }
 }
+.fixed--to--screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+}
+.chapters {
+    overflow-y: scroll;
+}
+.tabs li.active {
+    h4 {
+        font-weight: 600 !important;
+    }
+}
+#toggleOnClip {
+    position: absolute;
+    right: 0;
+    padding: 1em;
+    color: white;
+    display: none;
+    &.show {
+        display: block !important;
+    }
+}

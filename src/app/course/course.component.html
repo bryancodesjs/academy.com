@@ -1,10 +1,13 @@
-<section id="classroom" class="d-flex flex-column">
+<section id="classroom" class="d-flex flex-column" (window:scroll)="scrollRead()">
     <div class="">
         <app-course-navbar></app-course-navbar>
     </div>
     <div class="content">
         <div id="courseRender" class="d-flex">
             <div id="main" class="col-lg-9">
+                <div id="toggleOnClip" class="toggle--on--clip">
+                    <h3 (click)="toggleSideMenu()"><i class="bi bi-list-ul"></i></h3>
+                </div>
                 <div class="clip">
                     <video controls class="video">
                         <source src="../../assets/video/demo.mp4" type="video/mp4">
@@ -15,7 +18,8 @@
                     <!-- course navigation tabs -->
                     <div class="tabs">
                         <ul class="d-flex">
-                            <li><h4>Descripcion del curso</h4></li>
+                            <li class="active"><h4>Descripcion del curso</h4></li>
+                            <li><h4>Contenidos del curso</h4></li>
                             <li><h4>Notas</h4></li>
                             <li><h4>Contenido del curso</h4></li>
                         </ul>
@@ -64,7 +68,7 @@
                         <h4 class="no-margin"><b>Contenido del curso</b></h4>
                     </div>
                     <div id="cerrarContenidoLateral" class="d-flex align-items-center">
-                        <h4 class="no-margin"><i class="bi bi-x-lg"></i></h4>
+                        <h4 class="no-margin" (click)="toggleSideMenu()"><i class="bi bi-x-lg"></i></h4>
                     </div>
                 </div>
                 <hr class="no-margin">
